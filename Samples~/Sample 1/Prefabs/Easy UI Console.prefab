@@ -1645,8 +1645,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6568231181200790170}
-        m_TargetAssemblyTypeName: EasyUIConsoleManager, Assembly-CSharp
-        m_MethodName: EasyLog
+        m_TargetAssemblyTypeName: GAG.EasyUIConsole.EasyUIConsoleManager, EasyUIConsoleAssembly
+        m_MethodName: DevLog
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2300,8 +2300,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 593.07306, y: 0}
-  m_SizeDelta: {x: 1186.1461, y: 0}
+  m_AnchoredPosition: {x: 757.9827, y: 0}
+  m_SizeDelta: {x: 1515.9655, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4593998256379837622
 CanvasRenderer:
@@ -2701,6 +2701,7 @@ MonoBehaviour:
   _maxLineNumberInputField: {fileID: 7807729411762050987}
   _testLoginputField: {fileID: 8432929087022015807}
   _consoleTypeDropdown: {fileID: 6700994187188466605}
+  _maxLines: 50
 --- !u!1 &5087768776015572711
 GameObject:
   m_ObjectHideFlags: 0
@@ -3248,15 +3249,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-    <color=green>EasyUIConsoleManager.Instance.EasyMessage("</color><color=white>Sample
-    Message</color><color=green>");</color>
+  m_text: '<color=white>EasyUIConsoleManager.Instance.EasyLog("<color=white>Sample
+    Log Message</color><color=white>");</color>
 
 
 
-    <color=white>EasyUIConsoleManager.Instance.EasyInfo("<color=white>Sample
-    Info Message</color><color=white>");</color>
+    <color=green>EasyUIConsoleManager.Instance.EasyHiglight("</color><color=white>Sample
+    Higlight Message</color><color=green>");</color>
 
 
 
@@ -3496,7 +3495,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6568231181200790170}
+        m_TargetAssemblyTypeName: GAG.EasyUIConsole.EasyUIConsoleManager, EasyUIConsoleAssembly
+        m_MethodName: LimitLine
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7807729411762050987}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -3526,7 +3537,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []

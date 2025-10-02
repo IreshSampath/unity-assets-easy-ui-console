@@ -11,17 +11,20 @@ namespace GAG.EasyUIConsole
 
         enum ConsoleType
         {
-            Info,
+            Log,
+            Higlight,
             Warning,
-            Error,
-            Other
+            Error
         }
 
-        [SerializeField] ConsoleType _consoleType = ConsoleType.Info;
+        [SerializeField] ConsoleType _consoleType = ConsoleType.Log;
         [SerializeField] TMP_Text _consoleText;
         [SerializeField] TMP_InputField _maxLineNumberInputField;
         [SerializeField] TMP_InputField _testLoginputField;
         [SerializeField] TMP_Dropdown _consoleTypeDropdown;
+
+        [SerializeField] int _maxLines = 50; // Default max line number
+        int _currentLineCount = 1;
 
         private void Awake()
         {
@@ -39,17 +42,19 @@ namespace GAG.EasyUIConsole
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            _maxLineNumberInputField.text = "50"; // Default max line number
+
             _consoleTypeDropdown.AddOptions(new List<string>
-        {
-            ConsoleType.Info.ToString(),
-            ConsoleType.Warning.ToString(),
-            ConsoleType.Error.ToString(),
-            ConsoleType.Other.ToString()
-        });
+            {
+                ConsoleType.Log.ToString(),
+                ConsoleType.Higlight.ToString(),
+                ConsoleType.Warning.ToString(),
+                ConsoleType.Error.ToString()
+            });
+
+            _maxLineNumberInputField.text = _maxLines.ToString(); // Default max line number
         }
 
-        public void EasyLog(string consoleType)
+        public void DevLog(string consoleType)
         {
             if (string.IsNullOrEmpty(consoleType) || _testLoginputField == null) return;
 
@@ -68,14 +73,14 @@ namespace GAG.EasyUIConsole
             }
         }
 
-        public void EasyMessage(string message)
+        public void EasyLog(string message)
         {
-            PrintToConsole(message, ConsoleType.Other);
+            PrintToConsole(message, ConsoleType.Log);
         }
 
-        public void EasyInfo(string message)
+        public void EasyHiglight(string message)
         {
-            PrintToConsole(message, ConsoleType.Info);
+            PrintToConsole(message, ConsoleType.Higlight);
         }
 
         public void EasyWarning(string message)
@@ -92,24 +97,23 @@ namespace GAG.EasyUIConsole
         {
             if (inputTxt == null) return;
 
-            int maxLines = 50; // Default max line number
             if (int.TryParse(inputTxt.text, out int parsedMaxLines))
             {
+                EasyHiglight(parsedMaxLines.ToString());
                 if (parsedMaxLines > 100)
                 {
                     EasyWarning($"Max line number set to {100}. Max Line 50 is better for performance");
                 }
                 else
                 {
-                    EasyMessage($"Max line number set to {parsedMaxLines}.");
+                    EasyHiglight($"Max line number set to {parsedMaxLines}.");
                 }
-                maxLines = parsedMaxLines;
+                _maxLines = parsedMaxLines;
             }
             else
             {
                 EasyError("Invalid input for max line number.");
-                _maxLineNumberInputField.text = "50";
-                return;
+                _maxLineNumberInputField.text = _maxLines.ToString();
             }
         }
 
@@ -121,36 +125,42 @@ namespace GAG.EasyUIConsole
             }
         }
 
-        void PrintToConsole(string message, ConsoleType consoleType = ConsoleType.Info)
+        void PrintToConsole(string message, ConsoleType consoleType = ConsoleType.Log)
         {
             if (string.IsNullOrEmpty(message) || _consoleText == null) return;
-
-            // Get current timestamp
-            string timestamp = DateTime.Now.ToString("[mm:ss]");
 
             // Choose color based on ConsoleType
             string colorTag = consoleType switch
             {
-                ConsoleType.Info => "<color=white>",
+                ConsoleType.Log => "<color=white>",
+                ConsoleType.Higlight => "<color=green>",
                 ConsoleType.Warning => "<color=yellow>",
                 ConsoleType.Error => "<color=red>",
-                ConsoleType.Other => "<color=green>",
                 _ => "<color=white>"
             };
 
+            // Get current timestamp
+            string timestamp = DateTime.Now.ToString("[mm:ss]");
+
             // Format the message
-            string coloredMessage = $"{colorTag}{timestamp}  {message}</color>";
+            string coloredMessage = $"{_currentLineCount:D2} {colorTag}{timestamp}  {message}</color>";
 
             // Append the new message at the top
             _consoleText.text = coloredMessage + "\n" + _consoleText.text;
 
             // Limit the number of lines to avoid performance issues
             var lines = _consoleText.text.Split('\n');
-            if (lines.Length > 50) // Keep only the latest 50 lines
+
+            _currentLineCount++;
+            if(_currentLineCount > _maxLines)
             {
-                _consoleText.text = string.Join("\n", lines, 0, 50);
+                _currentLineCount = 1;
+            }
+
+            if (lines.Length > _maxLines) // Keep only the latest _maxLines
+            {
+                _consoleText.text = string.Join("\n", lines, 0, _maxLines);
             }
         }
-
     }
 }

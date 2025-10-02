@@ -6,8 +6,8 @@ namespace GAG.EasyUIConsole
     {
         void Start()
         {
-            EasyUIConsoleManager.Instance.EasyMessage("Sample Message");
-            EasyUIConsoleManager.Instance.EasyInfo("Sample Info Message");
+            EasyUIConsoleManager.Instance.EasyLog("Sample Log Message");
+            EasyUIConsoleManager.Instance.EasyHiglight("Sample Higlight Message");
             EasyUIConsoleManager.Instance.EasyWarning("Sample Warning Message");
             EasyUIConsoleManager.Instance.EasyError("Sample Error Message");
         }
