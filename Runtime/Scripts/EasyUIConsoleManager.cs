@@ -7,6 +7,8 @@ namespace GAG.EasyUIConsole
 {
     public class EasyUIConsoleManager : MonoBehaviour
     {
+        public static EasyUIConsoleManager Instance;
+
         enum ConsoleType
         {
             Info,
@@ -20,6 +22,19 @@ namespace GAG.EasyUIConsole
         [SerializeField] TMP_InputField _maxLineNumberInputField;
         [SerializeField] TMP_InputField _testLoginputField;
         [SerializeField] TMP_Dropdown _consoleTypeDropdown;
+
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -111,7 +126,7 @@ namespace GAG.EasyUIConsole
             if (string.IsNullOrEmpty(message) || _consoleText == null) return;
 
             // Get current timestamp
-            string timestamp = DateTime.Now.ToString("[HH:mm:ss]");
+            string timestamp = DateTime.Now.ToString("[mm:ss]");
 
             // Choose color based on ConsoleType
             string colorTag = consoleType switch
@@ -124,7 +139,7 @@ namespace GAG.EasyUIConsole
             };
 
             // Format the message
-            string coloredMessage = $"{colorTag}{message}</color>";
+            string coloredMessage = $"{colorTag}{timestamp}  {message}</color>";
 
             // Append the new message at the top
             _consoleText.text = coloredMessage + "\n" + _consoleText.text;
