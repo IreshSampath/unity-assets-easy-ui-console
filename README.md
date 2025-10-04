@@ -40,7 +40,7 @@ https://github.com/IreshSampath/unity-assets-easy-ui-console.git
 
 1. Go to **Package Manager → EasyUIConsole → Samples**
 3. Click **Import  → EasyUIConsole Sample**
-4. Drag the **Easy UI Console** prefab into your scene
+4. Drag the **EasyUIConsole** prefab into your scene
    
 ![Easy UIConsole Prefab Preview](Docs/Prefab.png)
 
