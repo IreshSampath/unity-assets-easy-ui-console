@@ -1,6 +1,6 @@
-# 🖥️ Easy UI Console for Unity
+# 🖥️ EasyUIConsole for Unity
 
-![Easy UI Console Preview](Docs/Preview.png)
+![EasyUIConsole Preview](Docs/Preview.png)
 
 ![Unity](https://img.shields.io/badge/Unity-2022.3%2B-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-PC%20%7C%20Android%20%7C%20iOS%20%7C%20WebGL%20%7C%20Editor-lightgrey.svg)
@@ -10,7 +10,7 @@
 
 ## 🚀 Overview
 
-**Easy UI Console** is a lightweight in-game console for **real-time log display** in Unity.  
+**EasyUIConsole** is a lightweight in-game console for **real-time log display** in Unity.  
 It provides a clean, customizable on-screen console that shows:
 
 - ✅ **Logs** $${\color{white}(White)}$$
@@ -30,7 +30,7 @@ Perfect for **runtime debugging**, **mobile builds**, **playtesting**, or **live
 2. Click **+** → **Add package from Git URL**
 3. Paste the following:
 https://github.com/IreshSampath/unity-assets-easy-ui-console.git
-4. Click **Add**
+4. Click **Install**
 
 ---
 
@@ -38,12 +38,11 @@ https://github.com/IreshSampath/unity-assets-easy-ui-console.git
 
 ### ✅ Step 1 — Import Sample
 
-1. Go to **Package Manager → Easy UI Console**
-2. Click **Import  → Easy UI Console**
-3. Click **Import  → Samples**
+1. Go to **Package Manager → EasyUIConsole → Samples**
+3. Click **Import  → EasyUIConsole Sample**
 4. Drag the **Easy UI Console** prefab into your scene
    
-![Easy UI Console Preview](Docs/Prefab.png)
+![Easy UIConsole Prefab Preview](Docs/Prefab.png)
 
 ### ✅ Step 2 — Print Messages from Code
 
@@ -69,7 +68,7 @@ This project is licensed under the MIT License — free for commercial and perso
 ---
 
 ## 🙏 Thank You
-Thanks for using Easy UI Console!
+Thanks for using EasyUIConsole!
 - Feel free to contribute, report bugs, or request new features.
 
 ---
