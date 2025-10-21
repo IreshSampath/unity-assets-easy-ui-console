@@ -9,7 +9,7 @@
   "changelogUrl": "https://example.com/easy-ui-console-changelog.html",
   "licensesUrl": "https://example.com/easy-ui-console-licensing.html",
   "dependencies": {
-    "com.unity.textmeshpro": "5.0.0"
+    "com.unity.textmeshpro": ">=3.0.6"
   },
   "samples": [
     {
