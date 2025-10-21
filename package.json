@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "com.ireshsampath.unity-assets.easy-ui-console",
   "version": "1.2.2",
   "displayName": "EasyUIConsole",
@@ -12,10 +12,11 @@
     "com.unity.textmeshpro": "3.0.6"
   },
   "relatedPackages": {
-  "com.unity.textmeshpro@5.0.0": {
-    "version": "5.0.0",
-    "unity": "6000.0",
-    "unityRelease": "0f1"
+	  "com.unity.textmeshpro@5.0.0": {
+		"version": "5.0.0",
+		"unity": "6000.0",
+		"unityRelease": "0f1"
+	}
   },
   "samples": [
     {
