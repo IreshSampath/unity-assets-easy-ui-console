@@ -3,14 +3,20 @@
   "version": "1.2.2",
   "displayName": "EasyUIConsole",
   "description": "EasyUIConsole is a Unity asset designed to simplify in-game UI console functionality. It offers easy integration for displaying logs, commands, and debugging information within your game.",
-  "unity": "6000.2",
-  "unityRelease": "4f1",
+  "unity": "2022.3",
+  "unityRelease": "0f1",
   "documentationUrl": "https://github.com/IreshSampath/unity-assets-easy-ui-console/blob/main/README.md",
   "changelogUrl": "https://example.com/easy-ui-console-changelog.html",
   "licensesUrl": "https://example.com/easy-ui-console-licensing.html",
   "dependencies": {
-    "com.unity.textmeshpro": ">=3.0.6"
+    "com.unity.textmeshpro": "3.0.6"
   },
+  "relatedPackages": {
+  "com.unity.textmeshpro@5.0.0": {
+    "version": "5.0.0",
+    "unity": "6000.0",
+    "unityRelease": "0f1"
+  }
   "samples": [
     {
       "displayName": "EasyUIConsole Sample",
