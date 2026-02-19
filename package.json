@@ -1,38 +1,46 @@
 ﻿{
   "name": "com.ireshsampath.unity-assets.easy-ui-console",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "displayName": "EasyUIConsole",
-  "description": "EasyUIConsole is a Unity asset designed to simplify in-game UI console functionality. It offers easy integration for displaying logs, commands, and debugging information within your game.",
+  "description": "Lightweight event-driven in-game UI console for Unity. EasyUIConsole provides a simple static API (EasyUIC) with an internal event system for displaying runtime logs, highlights, warnings, and errors across mobile, desktop, and WebGL builds.",
   "unity": "2022.3",
   "unityRelease": "0f1",
+
   "documentationUrl": "https://github.com/IreshSampath/unity-assets-easy-ui-console/blob/main/README.md",
-  "changelogUrl": "https://example.com/easy-ui-console-changelog.html",
-  "licensesUrl": "https://example.com/easy-ui-console-licensing.html",
+  "changelogUrl": "https://github.com/IreshSampath/unity-assets-easy-ui-console/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/IreshSampath/unity-assets-easy-ui-console/blob/main/LICENSE",
+
   "dependencies": {
     "com.unity.textmeshpro": "3.0.6"
   },
+
   "relatedPackages": {
-	  "com.unity.textmeshpro@5.0.0": {
-		"version": "5.0.0",
-		"unity": "6000.0",
-		"unityRelease": "0f1"
-	}
+    "com.unity.textmeshpro@5.0.0": {
+      "version": "5.0.0",
+      "unity": "6000.0",
+      "unityRelease": "0f1"
+    }
   },
+
   "samples": [
     {
       "displayName": "EasyUIConsole Sample",
-      "description": "An example scene demonstrating how to integrate and use EasyUIConsole for displaying in-game logs and potentially executing commands.",
+      "description": "Example scene demonstrating EasyUIC API usage, event-driven logging flow, and runtime console UI setup.",
       "path": "Samples~/Sample 1"
     }
   ],
+
   "keywords": [
     "ui",
     "console",
     "in-game console",
-    "easy console",
-    "logging",
-    "debugging"
+    "runtime logging",
+    "debug console",
+    "event-driven",
+    "mobile debugging",
+    "unity tools"
   ],
+
   "author": {
     "name": "Iresh Sampath",
     "email": "ireshsampath@gmail.com",

@@ -13,9 +13,6 @@
 **EasyUIConsole** is a lightweight in-game console for **real-time log display** in Unity.  
 It provides a clean, customizable on-screen console that shows:
 
-🎨 UI Behavior
-Log Type	Color Style
-
 - ✅ **Logs** $${\color{white}(White)}$$
 - ✅ **Highlights** $${\color{green}(Green)}$$
 - ✅ **Warnings** $${\color{yellow}(Yellow)}$$
@@ -49,41 +46,30 @@ https://github.com/IreshSampath/unity-assets-easy-ui-console.git
 
 ### ✅ Step 2 — Print Messages from Code
 
-#### ⭐ Direct Methods
 ```csharp
-using GAG.EasyUIConsole;
-
-EasyUIC.Log("Sample Log");
-EasyUIC.Highlight("Sample Highlight");
-EasyUIC.Warning("Sample Warning");
-EasyUIC.Error("Sample Error");
+EasyUIConsoleManager.Instance.EasyLog("Sample Log Message");
+EasyUIConsoleManager.Instance.EasyHiglight("Sample Highlight Message");
+EasyUIConsoleManager.Instance.EasyWarning("Sample Warning Message");
+EasyUIConsoleManager.Instance.EasyError("Sample Error Message");
 ```
 
-#### ⭐ Unified Print Method (Recommended for Dynamic Systems)
-```csharp
-using GAG.EasyUIConsole;
-
-EasyUIC.Print("Sample Log Print Message", EasyUIConsoleType.Log);
-EasyUIC.Print("Sample Highlight Print Message", EasyUIConsoleType.Highlight);
-EasyUIC.Print("Sample Warning Print Message", EasyUIConsoleType.Warning);
-EasyUIC.Print("Sample Error Print Message", EasyUIConsoleType.Error);
-```
-
-👉 This automatically raises internal events — no direct Manager access required.
+🎨 UI Behavior
+Log Type	Color Style
+Log	White
+Highlight	Green
+Warning	Yellow
+Error	Red
 
 ---
 
 ## 📜 License
-MIT License — Free for commercial and personal use.
+This project is licensed under the MIT License — free for commercial and personal use.
 
 ---
 
 ## 🙏 Thank You
 Thanks for using EasyUIConsole!
-- Feel free to contribute
-⭐ Star the repo
-🐞 Report issues
-🚀 Suggest improvements
+- Feel free to contribute, report bugs, or request new features.
 
 ---
 

@@ -211,7 +211,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1936623096
+--- !u!114 &1471924910926671778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398084185142084726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbfc4f02224a76498db7539f8ac3e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &4723997336549800958
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -219,6 +231,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2778447738113264789, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
+      propertyPath: m_text
+      value: "<color=#FF1493>EasyUIC.Log(<color=white>\"Sample Log Message\"</color>);\r\nEasyUIC.Highlight(<color=green>\"Sample
+        Highlight Message\"</color>);\r\nEasyUIC.Warning(<color=yellow>\"Sample Warning
+        Message\"</color>);\r\nEasyUIC.Error(<color=red>\"Sample Error Message\"</color>);\r\n       
+        \r\nEasyUIC.Print(<color=white>\"Sample Log Print Message\", EasyUIConsoleType.Log</color>);\r\nEasyUIC.Print(<color=green>\"Sample
+        Highlight Print Message\", EasyUIConsoleType.Highlight</color>);\r\nEasyUIC.Print(<color=yellow>\"Sample
+        Warning Print Message\", EasyUIConsoleType.Warning</color>);\r\nEasyUIC.Print(<color=red>\"Sample
+        Error Print Message\", EasyUIConsoleType.Error</color>);\n</color>"
+      objectReference: {fileID: 0}
     - target: {fileID: 4077873127169880970, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
       propertyPath: m_LocalPosition.x
       value: 937.59375
@@ -268,9 +290,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
+--- !u!4 &6469729908222054283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398084185142084726}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1257.023, y: 383.23657, z: 155.06824}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8398084185142084726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6469729908222054283}
+  - component: {fileID: 1471924910926671778}
+  m_Layer: 0
+  m_Name: EasyUIConsole Demo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1936623096}
+  - {fileID: 4723997336549800958}
+  - {fileID: 6469729908222054283}
