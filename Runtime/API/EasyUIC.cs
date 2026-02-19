@@ -2,6 +2,9 @@ namespace GAG.EasyUIConsole
 {
     public static class EasyUIC
     {
+        public static void OpenConsole()
+            => EasyUIConsoleEvents.RaiseConsoleOpened();
+        
         public static void Log(string text)
             => Print(text, EasyUIConsoleType.Log);
 

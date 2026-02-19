@@ -1,6 +1,6 @@
 ﻿{
   "name": "com.ireshsampath.unity-assets.easy-ui-console",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "displayName": "EasyUIConsole",
   "description": "Lightweight event-driven in-game UI console for Unity. EasyUIConsole provides a simple static API (EasyUIC) with an internal event system for displaying runtime logs, highlights, warnings, and errors across mobile, desktop, and WebGL builds.",
   "unity": "2022.3",
