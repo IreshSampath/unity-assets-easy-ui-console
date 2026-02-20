@@ -37,7 +37,7 @@ https://github.com/IreshSampath/unity-assets-easy-ui-console.git
 
 ## 🧰 Quick Start
 
-### ✅ Step 1 — Import Sample & Drag the **EasyUIConsole** prefab
+### ✅ Step 1 — Setup the EasyUIConsole Prefab
 
 1. Go to **Package Manager → EasyUIConsole → Samples**
 3. Click **Import  → EasyUIConsole Sample**
@@ -45,7 +45,7 @@ https://github.com/IreshSampath/unity-assets-easy-ui-console.git
    
 ![Easy UIConsole Prefab Preview](Docs/Prefab.png)
 
-### ✅ Step 2 — Print Messages from Code
+### ✅ Step 2 — Access the EasyUIConsole API
 
 #### ⭐ Console Control
 ```csharp
@@ -55,7 +55,7 @@ EasyUIC.OpenConsole();
 ```
 👉 Opens the console panel using internal events.
 
-#### ⭐ Direct Methods
+#### ⭐ Direct Log Methods
 ```csharp
 using GAG.EasyUIConsole;
 
@@ -73,7 +73,7 @@ EasyUIC.Print("Sample Highlight Print Message", EasyUIConsoleType.Highlight);
 EasyUIC.Print("Sample Warning Print Message", EasyUIConsoleType.Warning);
 EasyUIC.Print("Sample Error Print Message", EasyUIConsoleType.Error);
 ```
-👉 This automatically raises internal events — no direct Manager access required.
+#### 👉 Automatically raises internal events — no direct EasyUIConsoleManager reference required.
 ---
 
 ## 📜 License
