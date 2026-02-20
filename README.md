@@ -37,7 +37,7 @@ https://github.com/IreshSampath/unity-assets-easy-ui-console.git
 
 ## 🧰 Quick Start
 
-### ✅ Step 1 — Import Sample
+### ✅ Step 1 — Import Sample & Drag the **EasyUIConsole** prefab
 
 1. Go to **Package Manager → EasyUIConsole → Samples**
 3. Click **Import  → EasyUIConsole Sample**
