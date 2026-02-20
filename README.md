@@ -73,7 +73,7 @@ EasyUIC.Print("Sample Highlight Print Message", EasyUIConsoleType.Highlight);
 EasyUIC.Print("Sample Warning Print Message", EasyUIConsoleType.Warning);
 EasyUIC.Print("Sample Error Print Message", EasyUIConsoleType.Error);
 ```
-#### 👉 Automatically raises internal events — no direct EasyUIConsoleManager reference required.
+#### 👉 Automatically raises internal events — no direct reference to the EasyUIConsole core is required.
 ---
 
 ## 📜 License
