@@ -211,19 +211,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1471924910926671778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8398084185142084726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbfc4f02224a76498db7539f8ac3e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &4723997336549800958
+--- !u!1001 &43169129582959941
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -231,19 +219,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2778447738113264789, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
-      propertyPath: m_text
-      value: "<color=#FF1493>EasyUIC.Log(<color=white>\"Sample Log Message\"</color>);\r\nEasyUIC.Highlight(<color=green>\"Sample
-        Highlight Message\"</color>);\r\nEasyUIC.Warning(<color=yellow>\"Sample Warning
-        Message\"</color>);\r\nEasyUIC.Error(<color=red>\"Sample Error Message\"</color>);\r\n       
-        \r\nEasyUIC.Print(<color=white>\"Sample Log Print Message\", EasyUIConsoleType.Log</color>);\r\nEasyUIC.Print(<color=green>\"Sample
-        Highlight Print Message\", EasyUIConsoleType.Highlight</color>);\r\nEasyUIC.Print(<color=yellow>\"Sample
-        Warning Print Message\", EasyUIConsoleType.Warning</color>);\r\nEasyUIC.Print(<color=red>\"Sample
-        Error Print Message\", EasyUIConsoleType.Error</color>);\n</color>"
-      objectReference: {fileID: 0}
     - target: {fileID: 4077873127169880970, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 937.59375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4077873127169880970, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
       propertyPath: m_LocalPosition.y
@@ -251,7 +229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4077873127169880970, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 155.06824
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4077873127169880970, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
       propertyPath: m_LocalRotation.w
@@ -290,6 +268,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c4e8f3ae70c614cb8179516b866499, type: 3}
+--- !u!114 &1471924910926671778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398084185142084726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbfc4f02224a76498db7539f8ac3e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6469729908222054283
 Transform:
   m_ObjectHideFlags: 0
@@ -327,5 +317,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 4723997336549800958}
+  - {fileID: 43169129582959941}
   - {fileID: 6469729908222054283}
