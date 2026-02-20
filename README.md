@@ -12,8 +12,7 @@
 
 **EasyUIConsole** is a lightweight in-game console for **real-time log display** in Unity.  
 It provides a clean, customizable on-screen console that shows:
-🎨 UI Behavior
-Log Type	Color Style
+### 🎨 UI Behavior - Log Type	Color Style
 
 - ✅ **Logs** $${\color{white}(White)}$$
 - ✅ **Highlights** $${\color{green}(Green)}$$
@@ -26,7 +25,7 @@ Perfect for **runtime debugging**, **mobile builds**, **playtesting**, or **live
 
 ## 📦 Installation
 
-### Option A — Install via Unity Package Manager (Git URL)
+### Install via Unity Package Manager (Git URL)
 
 1. Open **Unity → Window → Package Manager**
 2. Click **+** → **Add package from Git URL**
